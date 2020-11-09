@@ -13,29 +13,75 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(
-                height:  100.0,
-                width:  100.0,
-                color: Colors.red,
-                child:  Text('Container 1'),
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage:  AssetImage('images/benFace.jpeg'),
               ),
-              Container(
-                width:  100.0,
-                height:  100.0,
-                color:  Colors.yellow,
-                child:  Text('Container 2'),
+              Text(
+                'Ben Willis',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize:  40.0,
+                  color:  Colors.white,
+                  fontWeight: FontWeight.bold,
+                )
               ),
-              Container(
-                width:  100.0,
-                height:  100.0,
-                color:  Colors.blue,
-                child:  Text('Container 3'),
+              Text(
+                'CHIEF EXECUTIVE OFFICER',
+                style: TextStyle(
+                  fontFamily: 'Source_Sans_Pro',
+                  fontSize: 20.0,
+                  color: Colors.teal[100],
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+                )
+              ),
+              SizedBox(
+                  height: 20.0,
+                  width:  150.0,
+                  child: Divider(
+                    color:  Colors.teal.shade100,
+                  ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                    leading:  Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title:  Text(
+                    '+1 312 576 3273',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'Source_Sans_Pro',
+                      fontSize: 20.0,
+                    ),
+                  )
+                )
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                 leading:  Icon(
+                   Icons.email,
+                   color: Colors.teal,
+                 ),
+                 title:  Text(
+                   'bwillis725@gmail.com',
+                   style: TextStyle(
+                     color: Colors.teal.shade900,
+                     fontFamily: 'Source_Sans_Pro',
+                     fontSize: 20.0,
+                   ),
+                 )
+                )
               ),
             ],
-          ),
+          )
         ),
       ),
     );
